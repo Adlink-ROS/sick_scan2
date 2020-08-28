@@ -303,7 +303,7 @@ int mainGenericLaser(int argc, char **argv, std::string nodeName)
   /*
    *  Check, if parameter for protocol type is set
    */
-  bool use_binary_protocol = true;
+  bool use_binary_protocol = false; //true
 #if TODO
   if (true == nhPriv.getParam("emul_sensor", emulSensor))
   {
@@ -393,6 +393,7 @@ int mainGenericLaser(int argc, char **argv, std::string nodeName)
         else
         {
           runState = scanner_finalize; // interrupt
+          runState = scanner_init; // interrupt
         }
       case scanner_finalize:
         break; // ExitError or similiar -> interrupt while-Loop

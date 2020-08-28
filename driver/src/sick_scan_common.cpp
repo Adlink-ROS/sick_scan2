@@ -982,8 +982,8 @@ namespace sick_scan
     bool useBinaryCmdNow = false;
     int maxCmdLoop = 2; // try binary and ascii during startup
 
-    const int shortTimeOutInMs = 5000; // during startup phase to check binary or ascii
-    const int defaultTimeOutInMs = 20000; // standard time out 20 sec.
+    const int shortTimeOutInMs = 1000; // during startup phase to check binary or ascii
+    const int defaultTimeOutInMs = 1000; // standard time out 1 sec.
 
     setReadTimeOutInMs(shortTimeOutInMs);
 
@@ -2681,7 +2681,7 @@ namespace sick_scan
 								msg.header.stamp = recvTimeStamp;
 
                                 msg.range_min = 0.0f;
-                                msg.range_max = 100.0f;
+                                msg.range_max = 25.0f; //100.0f
                                 pub_->publish(msg);
 							}
 #else

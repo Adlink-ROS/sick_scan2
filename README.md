@@ -149,7 +149,7 @@ Start a second terminal window
 ```
 cd ~/sick_scan_ws
 source ./install/setup.bash
-ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world laser
+ros2 run tf2_ros static_transform_publisher 0 0 0 0 0 0 world cloud
 ```
 Start a third terminal window
 ```
